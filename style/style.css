@@ -1,0 +1,95 @@
+.gitsearch {
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.gitsearch__formlabel {
+    text-transform: uppercase;
+}
+
+.gitsearch__formfield {
+    width: 350px;
+    height: 30px;
+}
+
+.output,
+.chosen-topikcs {
+    box-sizing: border-box;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    /*padding-bottom: 30px;*/
+    /*text-align: center;*/
+    /*border: 1px solid black;*/
+}
+
+.output__resultfield {
+    box-sizing: border-box;
+    /*text-align: left;*/
+    list-style: none;
+    padding-left: 0;
+}
+
+.chosen-topics {
+/*    position: relative;*/
+    width: 350px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+
+.chosen-topics-topic {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 350px;
+    height: 101px;
+    padding: 5px;
+    background-color: #E27BEB;
+    border: 1px solid black;
+}
+
+.chosen-topics-close {
+    position: absolute;
+    content: "×";
+    font-size: 60px;
+    line-height: 60px;
+    right: 10px;
+    top: 20%;
+    cursor: pointer;
+}
+
+.chosen-topics-content {
+    /*margin: 0 auto;*/
+    display: block;
+    height: 33%;
+    /*text-align: left;*/
+    text-transform: capitalize;
+}
+
+.output__resultfield_result {
+    box-sizing: border-box;
+    vertical-align: central;
+    height: 35px;
+    padding: 5px;
+    text-transform: capitalize;
+    background-color: #E3E3E3;
+    border: 1px solid black;
+}
+
+.output__resultfield_result:hover {
+    background-color: #65CDF9;
+}
+
+.git {
+    width: 50%;
+    min-height: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+/*    text-align: center;*/
+    background-color: #C4C4C4;
+}
+
+.gitsearch {
+    text-align: center;
+}
