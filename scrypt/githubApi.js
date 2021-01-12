@@ -1,12 +1,12 @@
 let gitsearch = document.querySelector(".gitsearch");
 let output = document.querySelector(".output");
-let searchfield = document.querySelector(".gitsearch__formfield");
+let searchField = document.querySelector(".gitsearch__formfield");
 let chosenTopics = document.querySelector(".chosen-topics");
 
 let searchRequest = "?q=";
 let url = new URL( searchRequest,  "https://api.github.com/search/repositories");
 
-searchfield.autocomplete="off";
+searchField.autocomplete="off";
 
 //FUNCTIONS
 
@@ -20,7 +20,7 @@ const debounce = (fn, debounceTime) => {
         clearTimeout(timer);
         timer = setTimeout(() => fn.apply(savedThis, savedArgs), debounceTime);
         
-    }
+    };
 
 };
 
@@ -28,19 +28,20 @@ const sendLast = debounce(sendRequest, 500);
 
 async function sendRequest(e){
     e.preventDefault();
+        
         let response;
-        if (searchfield.value) {
-            response = await fetch(url + ( searchfield.value));
+        if (searchField.value) {
+            response = await fetch(url + ( searchField.value));
         } 
 //        else {
 //            
 //        }
-        response = await fetch(url + (searchRequest + searchfield.value));
+        response = await fetch(url + (searchRequest + searchField.value));
         let result = await response.json();
         let items = Array.from(result.items);
         showFive(items);
     }
-}
+//}
 
 function showFive(items) {
     let resultfield = document.querySelector(".output__resultfield");
@@ -96,7 +97,13 @@ function choseThis(e, items) {
 
 //LISTENERS
 
-searchfield.addEventListener("keypress", sendLast);
+    searchField.addEventListener('keydown', function(event) {
+        if(event.keyCode === 13) {
+           event.preventDefault();
+        }
+    });
+ 
+searchField.addEventListener("keydown", sendLast);
 
 //DOM
 let ul = document.createElement("ul");
