@@ -28,8 +28,6 @@ const sendLast = debounce(sendRequest, 500);
 
 async function sendRequest(e){
     e.preventDefault();
-    if (e.target === searchfield) {
-        console.log(url + ( searchfield.value));
         let response;
         if (searchfield.value) {
             response = await fetch(url + ( searchfield.value));
@@ -45,17 +43,13 @@ async function sendRequest(e){
 }
 
 function showFive(items) {
-    console.log(items);
     let resultfield = document.querySelector(".output__resultfield");
     resultfield.innerHTML = "";
     
     for (let i = 0; i < 5; i++){
         if (items[i]) {
-//            console.log(i);
-//            console.log(items[i].name);
             let li = document.createElement("li");
             li.classList.add("output__resultfield_result");
-//            li.classList.add(`output__resultfield_res${i}`);
             li.textContent = items[i].name;
             li.setAttribute("data-number", `${i}`);
             li.addEventListener("click", (e) => {
@@ -65,7 +59,6 @@ function showFive(items) {
             resultfield.append(li);
         }
     }
-//    console.log(items.length);
 }
 
 function choseThis(e, items) {
@@ -98,9 +91,6 @@ function choseThis(e, items) {
     div.append(span3);
     div.append(closeBut);
     
-    console.log(items[numInArr].name);
-    console.log(items[numInArr].owner.login);
-    console.log(items[numInArr].stargazers_count);
     chosenTopics.append(div);
 }
 
