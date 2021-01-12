@@ -23,11 +23,19 @@
     /*border: 1px solid black;*/
 }
 
+.output {
+
+}
+
 .output__resultfield {
+    position: relative;
     box-sizing: border-box;
     /*text-align: left;*/
     list-style: none;
     padding-left: 0;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 16px
 }
 
 .chosen-topics {

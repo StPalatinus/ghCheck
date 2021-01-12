@@ -9,10 +9,11 @@
     <body>
         <article class="git">
             <form class="gitsearch">
-                <label for="fname" class="gitsearch__formlabel">Search github:</label><br>
-                <input type="search" class="gitsearch__formfield" id="searchfield" name="fname"><br><br>
+                <label for="formname" class="gitsearch__formlabel">Search github:</label><br>
+                <input type="search" class="gitsearch__formfield" id="gitsearch__formline" name="formname" autocomplete="off">
+<!--                <div class="output"></div>-->
             </form>
-            <div class="output"></div>
+<!--            <div class="output"></div>-->
             <div class="chosen-topics"></div>
         </article>
         <script src="scrypt/githubApi.js" type="text/javascript"></script>
