@@ -25,7 +25,7 @@ const debounce = (fn, debounceTime) => {
 
 };
 
-const sendLast = debounce(sendRequest, 1500);
+const sendLast = debounce(sendRequest, 2000);
 
 async function sendRequest(e){
     e.preventDefault();
@@ -107,6 +107,10 @@ function choseThis(e, items) {
     div.append(topicOwner);
     div.append(topicStars);
     div.append(closeBut);
+    
+    let resultfield = document.querySelector(".output__resultfield");
+    resultfield.innerHTML = "";
+    searchField.value = "";
     
     chosenTopics.append(div);
 }
