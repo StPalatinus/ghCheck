@@ -38,6 +38,13 @@
     margin-bottom: 16px
 }
 
+.request-error {
+    text-align: center;
+    color: red;
+    padding-bottom: 17px;
+    z-index: 999;
+}
+
 .chosen-topics {
 /*    position: relative;*/
     width: 350px;
@@ -93,7 +100,7 @@
     min-height: 370px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 10px;
+    padding: 10px;
 /*    text-align: center;*/
     background-color: #C4C4C4;
 }
